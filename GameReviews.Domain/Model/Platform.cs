@@ -1,6 +1,6 @@
 ﻿namespace GameReviews.Domain.Model;
 
-public class Publisher
+public class Platform
 {
     public int Id { get; set; }
     public required string Name { get; set; }
@@ -8,4 +8,3 @@ public class Publisher
     public DateTime? UpdatedAt { get; set; }
     public ICollection<Game>? Games { get; set; }
 }
-

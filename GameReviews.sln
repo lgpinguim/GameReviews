@@ -23,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - CrossCutting", "4.2 -
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameReviews.Infra.Data", "GameReviews.Infra.Data\GameReviews.Infra.Data.csproj", "{1915B6A9-E9E2-4567-86AB-7A008CE2BE45}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameReviews.Test", "GameReviews.Test\GameReviews.Test.csproj", "{3BA66236-936B-418E-AF1F-794924947915}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{1915B6A9-E9E2-4567-86AB-7A008CE2BE45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1915B6A9-E9E2-4567-86AB-7A008CE2BE45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1915B6A9-E9E2-4567-86AB-7A008CE2BE45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BA66236-936B-418E-AF1F-794924947915}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BA66236-936B-418E-AF1F-794924947915}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BA66236-936B-418E-AF1F-794924947915}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BA66236-936B-418E-AF1F-794924947915}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -51,6 +57,7 @@ Global
 		{861360AA-6F90-4CDF-AEF4-E2FE49C09EC1} = {0A0BE705-910E-48B1-88AB-06D1EEB17C05}
 		{60E70EE9-3EC9-4F79-9D85-2E1234BA5367} = {0A0BE705-910E-48B1-88AB-06D1EEB17C05}
 		{1915B6A9-E9E2-4567-86AB-7A008CE2BE45} = {861360AA-6F90-4CDF-AEF4-E2FE49C09EC1}
+		{3BA66236-936B-418E-AF1F-794924947915} = {F1B63E70-0C06-4EA0-AC59-19B45FF32E61}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8EF42DF9-5CBC-4C6E-B7B4-A781D0D63B11}

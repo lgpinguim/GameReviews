@@ -1,4 +1,5 @@
 ﻿using GameReviews.Domain.Model;
+using GameReviews.Infra.Data.Mappings;
 using Microsoft.EntityFrameworkCore;
 
 namespace GameReviews.Infra.Data.Context;
@@ -12,14 +13,22 @@ public class GameReviewsContext : DbContext
     public DbSet<Category> Categories { get; set; }
     public DbSet<Developer> Developers { get; set; }
     public DbSet<LanguageSupport> LanguageSupports { get; set; }
+    public DbSet<Platform> Platforms { get; set; }
     public DbSet<Publisher> Publishers { get; set; }
     public DbSet<Review> Reviews { get; set; }
     public DbSet<User> Users { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-
+        modelBuilder.ApplyConfiguration(new GameMap());
+        modelBuilder.ApplyConfiguration(new AchievementMap());
+        modelBuilder.ApplyConfiguration(new CategoryMap());
+        modelBuilder.ApplyConfiguration(new DeveloperMap());
+        modelBuilder.ApplyConfiguration(new LanguageSupportMap());
+        modelBuilder.ApplyConfiguration(new PublisherMap());
+        modelBuilder.ApplyConfiguration(new ReviewMap());
+        modelBuilder.ApplyConfiguration(new UserMap());
+        base.OnModelCreating(modelBuilder);
     }
-
 }
 
