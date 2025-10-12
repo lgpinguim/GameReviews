@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+  # SQL Server Database
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: gamereviews-sqlserver
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=TestPassword123!
+      - MSSQL_PID=Developer
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+    networks:
+      - gamereviews-network
+    healthcheck:
+      test: /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P TestPassword123! -Q "SELECT 1" || exit 1
+      interval: 10s
+      timeout: 3s
+      retries: 10
+      start_period: 10s
+
+  # Your ASP.NET Core Application
+  gamereviews-api:
+    build:
+      context: .
+      dockerfile: GameReviews/Dockerfile
+    container_name: gamereviews-api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:8080
+      - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=GameReviewsDB;User Id=sa;Password=TestPassword123!;TrustServerCertificate=True;
+    ports:
+      - "5000:8080"
+      - "5001:8081"
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+    networks:
+      - gamereviews-network
+    restart: on-failure
+
+networks:
+  gamereviews-network:
+    driver: bridge
+
+volumes:
+  sqlserver_data:
+    driver: local

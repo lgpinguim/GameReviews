@@ -28,6 +28,6 @@ public class PlatformMap : IEntityTypeConfiguration<Platform>
 
         builder.HasMany(p => p.Games)
             .WithMany(g => g.Platforms)
-            .UsingEntity(j => j.ToTable("Platforms"));
+            .UsingEntity(j => j.ToTable("GamePlatforms"));
     }
 }

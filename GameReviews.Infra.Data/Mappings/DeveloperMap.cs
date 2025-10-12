@@ -28,6 +28,6 @@ public class DeveloperMap : IEntityTypeConfiguration<Developer>
 
         builder.HasMany(d => d.Games)
             .WithMany(g => g.Developers)
-            .UsingEntity(j => j.ToTable("Developers"));
+            .UsingEntity(j => j.ToTable("GameDevelopers"));
     }
 }

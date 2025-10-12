@@ -58,19 +58,19 @@ public class GameMap : IEntityTypeConfiguration<Game>
 
         builder.HasMany(g => g.Developers)
             .WithMany(d => d.Games)
-            .UsingEntity(j => j.ToTable("Developers"));
+            .UsingEntity(j => j.ToTable("GameDevelopers"));
 
         builder.HasMany(g => g.Publishers)
             .WithMany(p => p.Games)
-            .UsingEntity(j => j.ToTable("Publishers"));
+            .UsingEntity(j => j.ToTable("GamePublishers"));
 
         builder.HasMany(g => g.Categories)
             .WithMany(c => c.Games)
-            .UsingEntity(j => j.ToTable("Categories"));
+            .UsingEntity(j => j.ToTable("GameCategories"));
 
         builder.HasMany(g => g.Platforms)
             .WithMany(p => p.Games)
-            .UsingEntity(j => j.ToTable("Platforms"));
+            .UsingEntity(j => j.ToTable("GamePlatforms"));
 
         builder.HasMany(g => g.LanguageSupport)
             .WithOne(ls => ls.Game)

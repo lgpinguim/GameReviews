@@ -28,6 +28,6 @@ public class PublisherMap : IEntityTypeConfiguration<Publisher>
 
         builder.HasMany(p => p.Games)
             .WithMany(g => g.Publishers)
-            .UsingEntity(j => j.ToTable("Publishers"));
+            .UsingEntity(j => j.ToTable("GamePublishers"));
     }
 }

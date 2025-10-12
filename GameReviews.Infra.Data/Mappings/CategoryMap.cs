@@ -32,6 +32,6 @@ public class CategoryMap : IEntityTypeConfiguration<Category>
 
         builder.HasMany(c => c.Games)
             .WithMany(g => g.Categories)
-            .UsingEntity(j => j.ToTable("Categories"));
+            .UsingEntity(j => j.ToTable("GameCategories"));
     }
 }
