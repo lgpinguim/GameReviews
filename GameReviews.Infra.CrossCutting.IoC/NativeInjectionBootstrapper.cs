@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using GameReviews.Domain.Interfaces;
+using GameReviews.Infra.Data.Repository;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace GameReviews.Infra.CrossCutting.IoC;
 
