@@ -32,6 +32,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		docker-compose.yml = docker-compose.yml
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameReviews.Application", "GameReviews.Application\GameReviews.Application.csproj", "{7AED9E41-39AC-4EA2-8445-BE057DDAB52C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,6 +60,10 @@ Global
 		{7ECA7349-6373-4DD7-B10A-B03D195AF287}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7ECA7349-6373-4DD7-B10A-B03D195AF287}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7ECA7349-6373-4DD7-B10A-B03D195AF287}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AED9E41-39AC-4EA2-8445-BE057DDAB52C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AED9E41-39AC-4EA2-8445-BE057DDAB52C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AED9E41-39AC-4EA2-8445-BE057DDAB52C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AED9E41-39AC-4EA2-8445-BE057DDAB52C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,6 +76,7 @@ Global
 		{1915B6A9-E9E2-4567-86AB-7A008CE2BE45} = {861360AA-6F90-4CDF-AEF4-E2FE49C09EC1}
 		{3BA66236-936B-418E-AF1F-794924947915} = {F1B63E70-0C06-4EA0-AC59-19B45FF32E61}
 		{7ECA7349-6373-4DD7-B10A-B03D195AF287} = {60E70EE9-3EC9-4F79-9D85-2E1234BA5367}
+		{7AED9E41-39AC-4EA2-8445-BE057DDAB52C} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8EF42DF9-5CBC-4C6E-B7B4-A781D0D63B11}
